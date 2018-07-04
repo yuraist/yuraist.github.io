@@ -1,58 +1,76 @@
-<!DOCTYPE HTML>
-<!--
-	Identity by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Yura Istomin</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-loading">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+  <style type="text/css">
+    body {
+      margin-top: 70px;
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
 
-				<!-- Main -->
-					<section id="main">
-						<header>
-							<span class="avatar"><img src="images/avatar.png" width='122' alt="" /></span>
-							<h1>Yura Istomin</h1>
-							<p>Software Engineer</p>
-						</header>
-						<footer>
-							<ul class="icons">
-								<li><a href="https://twitter.com/yuraist" class="fa-twitter" target="_blank">Twitter</a></li>
-								<li><a href="https://instagram.com/yuraist" class="fa-instagram" target="_blank">Instagram</a></li>
-								<li><a href="https://www.facebook.com/yuraistom" class="fa-facebook" target="_blank">Facebook</a></li>
-							</ul>
-						</footer>
-					</section>
+  <title>Weight converter</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        
+        <h1 class="display-4 text-center">
+          Weight Converter
+        </h1>
+        
+        <form>
+          <div class="form-group">
+            <input id="lbsInput" 
+            type="number" 
+            class="form-control form-control-lg" 
+            placeholder="Enter pounds...">
+          </div>
+        </form>
+        
+        <div id="output">
+          <div class="card bg-primary mb-3">
+            <div class="card-body">
+              <h4>Grams:</h4>
+              <div id="gramsOutput"></div>
+            </div>
+          </div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="copyright">
-							<li>&copy; Yuraist</li>
-						</ul>
-					</footer>
+          <div class="card bg-success mb-3">
+            <div class="card-body">
+              <h4>Kilograms:</h4>
+              <div id="kilogramsOutput"></div>
+            </div>
+          </div>
 
-			</div>
+          <div class="card bg-danger mb-3">
+            <div class="card-body">
+              <h4>Ounces:</h4>
+              <div id="ouncesOutput"></div>
+            </div>
+          </div>
 
-		<!-- Scripts -->
-			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
-			<script>
-				if ('addEventListener' in window) {
-					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
-					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-				}
-			</script>
+        </div>
+      </div>
+    </div>
+  </div>
 
-	</body>
+  <script type="text/javascript">
+    document.getElementById('output').style.visibility = 'hidden';
+    document.getElementById('lbsInput').addEventListener('input', function(e) {
+      document.getElementById('output').style.visibility = 'visible';
+      let lbs = e.target.value;
+      document.getElementById('gramsOutput').innerHTML = lbs/0.0022046;
+      document.getElementById('kilogramsOutput').innerHTML = lbs/2.2046;
+      document.getElementById('ouncesOutput').innerHTML = lbs * 16;
+    });
+  </script>
+</body>
 </html>
