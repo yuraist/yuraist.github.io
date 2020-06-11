@@ -1,77 +1,72 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible">
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js"></script>
-  
-  <title>Weight converter</title>
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="style.css">
+	<title>Yura Istomin | iOS Developer, UX/UI Designer</title>
 </head>
 <body>
-  <nav class="topnav" id="myTopnav">
-    <a href="#" class="active">Home</a>
-    <a href="bookmarker.html">Bookmarker App</a>
-    <a href="landing.html">Responsive Landing</a>
-    <a href="#">To-Do App</a>
-    <a href="javascript:void(0);" class="icon" onclick="toggle()">&#9776;</a>
-  </nav>
+<div class="container">
+	
+	<div class="info">
+		<h1>
+		 Hi, I'm Yura Istomin
+		</h1>
+		<h2>
+			iOS Developer and UX/UI Designer
+		</h2>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 offset-md-3">
-        
-        <h1 on-swipe-down="this.innerHTML='WEIGHT CONVERTER'" on-swipe-left="Weight Converter" class="text-center">
-          Weight Converter
-        </h1>
-        
-        <form>
-          <div class="form-group">
-            <input id="lbsInput" 
-            type="number" 
-            class="form-control form-control-lg" 
-            placeholder="Enter pounds...">
-          </div>
-        </form>
-        
-        <div id="output">
-          <div class="card bg-primary mb-3">
-            <div class="card-body">
-              <h4>Grams:</h4>
-              <div id="gramsOutput"></div>
-            </div>
-          </div>
+		<h3>
+		 	Apps I work on
+		</h3>
 
-          <div class="card bg-success mb-3">
-            <div class="card-body">
-              <h4>Kilograms:</h4>
-              <div id="kilogramsOutput"></div>
-            </div>
-          </div>
+		<div class="apps">
+			<a href="https://apps.apple.com/us/app/lifeviewer-daily-planner/id1482922018" target="_blank">
+			 	<p class="app-title">LifeViewer - Daily Planner</p>
+			</a>
+	
+			<a href="https://apps.apple.com/us/app/stones-healthy-habits/id1501521038" target="_blank">
+			 	<p class="app-title">Stones - Healthy Habits</p>
+			</a>
+				
+			<a href="https://apps.apple.com/us/app/acyd-video-filters/id1477331092" target="_blank">
+			 	<p class="app-title">ACYD Video Filters</p>
+			</a>
+				
+			<a href="https://apps.apple.com/us/app/morpheus-look-famous/id1486347109" target="_blank">
+			 	<p class="app-title">Morpheus - Look famous</p>
+		 </a>
+		</div>	
 
-          <div class="card bg-danger mb-3">
-            <div class="card-body">
-              <h4>Ounces:</h4>
-              <div id="ouncesOutput"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+		<h3>
+		 	Contact Me on Social Networks
+		</h3>
+		
+		<div class="apps">
+			<a href="https://twitter.com/yuraist" target="_blank">
+			 	<p class="app-title">Twitter</p>
+			</a>
+	
+			<a href="https://www.facebook.com/yuraistom" target="_blank">
+			 	<p class="app-title">Facebook</p>
+			</a>
 
-  <script type="text/javascript">
-    document.getElementById('output').style.visibility = 'hidden';
-    document.getElementById('lbsInput').addEventListener('input', function(e) {
-      document.getElementById('output').style.visibility = 'visible';
-      let lbs = e.target.value;
-      document.getElementById('gramsOutput').innerHTML = lbs/0.0022046;
-      document.getElementById('kilogramsOutput').innerHTML = lbs/2.2046;
-      document.getElementById('ouncesOutput').innerHTML = lbs * 16;
-    });
-  </script>
+			<a href="https://www.instagram.com/yuraist/" target="_blank">
+			 	<p class="app-title">Instagram</p>
+			</a>
+
+			<a href="https://vk.com/yuraist" target="_blank">
+			 	<p class="app-title">VK</p>
+			</a>
+			
+			<a href="http://ttttt.me/yuraist" target="_blank">
+			 	<p class="app-title">Telegram</p>
+			</a>
+
+		</div>
+
+	</div>
+
+</div>
 </body>
 </html>
